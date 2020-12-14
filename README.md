@@ -41,7 +41,7 @@ We want a list of all boxes in a file that *do not* get suppressed by the above 
 ## What do we want you to do?
 
 ### Task 1:
-A solution exists in [the src directory](./src). This solution contains a sample [box file](./src/BoxCorp.App/boxes.csv).  Write a program to satisfy the requirements above. You will be judged based on:
+A solution exists in [the src directory](./src). This solution contains a sample [box file](./src/BoxCorp/BoxCorp.App/boxes.csv).  Write a program to satisfy the requirements above. You will be judged based on:
 1. Accuracy of the algorithm
 2. Code hygene
 3. Performance of the code against a benchmark
