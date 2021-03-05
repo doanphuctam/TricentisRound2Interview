@@ -1,22 +1,21 @@
 ﻿using System;
-using Microsoft.VisualBasic.FileIO;
 using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using Jaq;
 using System.Linq;
 using System.Drawing;
 
-namespace BoxCorp.App
+namespace Jaq
 {
     public class Program
     {
-        public int SortBoxes()
+        public void RunApp(string path)
+        {
+            SortBoxes(path);
+        }
+
+        public int SortBoxes(string path)
         {
             CsvHandler csvHandler = new CsvHandler();
-            List<Box> boxes = csvHandler.Load
-                (@"~/boxes.csv")
-                .ToList();
+            List<Box> boxes = csvHandler.Load(path).ToList();
 
             //eleminate based on rank threshold
             boxes = boxes.Where(box => box.Rank >= 0.5).ToList();
