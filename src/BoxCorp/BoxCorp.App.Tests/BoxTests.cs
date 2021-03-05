@@ -14,9 +14,7 @@ namespace BoxCorp.App.Tests {
             boxes.Add(new Box(8, 9, 2, 2, 0.3));
 
             var program = new Program();
-            int boxesLeft = program.SortBoxes
-                (@"~/boxes.csv");
-            Assert.AreEqual(boxesLeft, 1879);
+            Assert.AreEqual(program.SortBoxes(boxes), 1879);
         }
     }
 }

@@ -9,14 +9,13 @@ namespace Jaq
     {
         public void RunApp(string path)
         {
-            SortBoxes(path);
-        }
-
-        public int SortBoxes(string path)
-        {
             CsvHandler csvHandler = new CsvHandler();
             List<Box> boxes = csvHandler.Load(path).ToList();
+            SortBoxes(boxes);
+        }
 
+        public int SortBoxes(List<Box> boxes)
+        {
             //eleminate based on rank threshold
             boxes = boxes.Where(box => box.Rank >= 0.5).ToList();
 
