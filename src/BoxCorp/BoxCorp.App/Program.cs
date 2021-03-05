@@ -13,10 +13,9 @@ namespace BoxCorp.App
     {
         public int SortBoxes()
         {
-
             CsvHandler csvHandler = new CsvHandler();
             List<Box> boxes = csvHandler.Load
-                (@"/Users/tamdoan/Desktop/tricentis/TricentisRound2Interview/src/BoxCorp/BoxCorp.App/boxes.csv")
+                (@"~/boxes.csv")
                 .ToList();
 
             //eleminate based on rank threshold
