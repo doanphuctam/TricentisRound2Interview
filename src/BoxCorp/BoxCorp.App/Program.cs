@@ -7,11 +7,11 @@ namespace Jaq
 {
     public class Program
     {
-        public void RunApp(string path)
+        public int RunApp(string path)
         {
             CsvHandler csvHandler = new CsvHandler();
             List<Box> boxes = csvHandler.Load(path).ToList();
-            SortBoxes(boxes);
+            return SortBoxes(boxes);
         }
 
         public int SortBoxes(List<Box> boxes)
